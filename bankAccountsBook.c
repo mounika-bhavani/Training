@@ -1,19 +1,29 @@
 // To read and display bank employee details using structure
  
 #include <stdio.h>
-#define NOOFEMPLOYEES 10
+#define NO_OF_EMPLOYEES 10
 //defining structure
 
 struct employee
 {
-    char    employeeName[30][NOOFEMPLOYEES];
-    int     accountNumber[NOOFEMPLOYEES];
-    float   balance[NOOFEMPLOYEES];
+    char    employeeName[NO_OF_EMPLOYEES][30];
+    int     accountNumber[NO_OF_EMPLOYEES];
+    float   balance[NO_OF_EMPLOYEES];
+};
+
+struct employee
+{
+    char    employeeName[30];
+    int     accountNumber;
+    float   balance;
 };
  
+
+
+
 int main()
 {
-    struct employee emp;
+    struct employee emp[NO_OF_EMPLOYEES];
     int numberOfEmployees;
      
     printf("Enter number of employees: ");
@@ -24,8 +34,8 @@ int main()
     
     for(int employeeNumber = 0; employeeNumber < numberOfEmployees; employeeNumber++)
     {
-        printf("\nEnter %d employee details ? \n", employeeNumber + 1);
-        printf("Enter  EmployeeName: ");          
+        printf("\nEnter %d employee details? \n", employeeNumber + 1);
+        printf("Enter Employee Name: ");          
         scanf("%s", &emp.employeeName[employeeNumber]);
         printf("Enter  AccountNumber: ");            
         scanf("%d", &emp.accountNumber[employeeNumber]);
@@ -37,7 +47,7 @@ int main()
 
     for(int employeeNumber = 0; employeeNumber < numberOfEmployees; employeeNumber++)
     {
-        printf("\nEmployee %d details:\n ", employeeNumber + 1);
+        printf("\nEmployee details %d:\n", employeeNumber + 1);
         printf("EmployeeName: %s \n", emp.employeeName[employeeNumber]);
         printf("AccountNumber: %d \n", emp.accountNumber[employeeNumber]);
         printf("Balance: %f\n", emp.balance[employeeNumber]);

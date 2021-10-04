@@ -1,0 +1,2 @@
+Languages
+A language is a set of string all of which are chosen from some ∑*, where ∑ is a particular alphabet. This means that language L is subset of ∑*. An example is English language, where the collection of legal English words is a set of strings over the alphabet that consists of all the letters. Another example is the C programming language where the alphabet is a subset of the ASCii characters and programs are subset of strings that can be formed from this alphabet.

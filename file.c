@@ -1,25 +1,26 @@
-//read and saving a file
+//writing to a file
 
 #include <stdio.h>
 int main()
 {
    char name[10];
-   FILE *fptr;
+   FILE *namePointer;
 
-   // use appropriate location if you are using MacOS or Linux
-   fptr = fopen("F:\\Training\\hi.txt","w");
+   //opening a file
 
-   if(fptr == NULL)
+   namePointer = fopen("F:\\Training\\name.txt","w");
+   if(namePointer == NULL)
    {
-      printf("Nothing in the file");   
-     // exit(1);             
+      printf("Nothing in the file");              
    }
 
    printf("Enter name: ");
    scanf("%s",&name);
+   
+   //printing into file.
 
-   fprintf(fptr,"%s",name);
-   fclose(fptr);
+   fprintf(namePointer,"%s",name);
+   fclose(namePointer);
 
    return 0;
 }

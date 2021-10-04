@@ -25,22 +25,23 @@ void main()
           }
         
       }
-      int sumOf(int arr[][], int n)
-      {
-          int sum = 0;
-          for (int i = 0; i < n; i++)
-          sum += arr[i];
-          return sum;
-      }
+      // int sumOf(int arr[][], int n)
+      // {
+      //     int sum = 0;
+      //     for (int i = 0; i < n; i++)
+      //     sum += arr[i];
+      //     return sum;
+      // }
       for( int counter = 0; counter < noOfStudents; counter++)
       {
-          printf("Student %d name: ", names[counter]);
+          printf("%s marks: ", names[counter]);
           for (markCounter = 0; markCounter < noOfSubjects; markCounter++)
           {
-              printf("Subject %d of %d marks is %d: ", markCounter + 1, noOfSubjects, marks[markCounter] );
+              printf("Subject %d marks are %d.", markCounter + 1, marks[counter][markCounter]);
           }
-          avg = sumOf(marks[counter][markCounter], noOfSubjects );
-          printf("Average is: ", avg);
+          printf("\n");
+          // avg = sumOf(marks[counter][markCounter], noOfSubjects );
+          // printf("Average is: ", avg);
         
       }
 
